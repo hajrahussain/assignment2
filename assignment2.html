@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript">
+       
+    function add(){
+        var x=document.getElementById('First');
+        var y=document.getElementById('Second');
+        var v= /^[0-9]+$/;
+        if(!x.value.match(v) || !y.value.match(v)){
+            alert('Please Enter integers only');
+       }else{
+        var z=parseInt(x.value) + parseInt(y.value);
+        alert("X + Y = "+z);
+       }
+        }
+     function sub(){
+        var x=document.getElementById('First');
+        var y=document.getElementById('Second');
+        var v= /^[0-9]+$/;
+        if(!x.value.match(v) || !y.value.match(v)){
+            alert('Please Enter integers only');
+       }else{
+        var z=parseInt(x.value) - parseInt(y.value);
+        alert("X - Y = "+z);
+       }
+        }
+</script>
+    <title>calculator</title>
+</head>
+<body>
+    <div class="container d-flex align-items-center justify-content-center" style="height:625px">
+        <div class="w-50 justify-content-center" style="background-color:rgba(0, 0, 0, 0.1);">
+        	<div class="d-flex flex-column justify-content-center">
+        		<div class="mx-auto m-3">
+        			Enter 1st Value:
+        			<input class="ml-2" type="text" id="First">
+        		</div>
+        		<div class="mx-auto m-3">
+        			Enter 2nd Value:
+        			<input class="ml-2" type="text" id="Second">
+        		</div>
+        		<div class="m-3  mx-auto">
+        			<button type="button" onclick="add()" class="btn btn-primary  mr-3" style="width: 100px">Add</button>
+        			<button type="button" onclick="sub()" class="btn btn-primary " style="width: 100px">Subtract</button>
+        		</div>
+        	</div>
+            
+
+        </div>
+    </div>
+
+</body>
+</html>
